@@ -1,0 +1,10 @@
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\bin\Debug\PengolahanCitraForms.exe.config
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\bin\Debug\PengolahanCitraForms.exe
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\bin\Debug\PengolahanCitraForms.pdb
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.csprojAssemblyReference.cache
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.Form1.resources
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.Properties.Resources.resources
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.csproj.GenerateResource.cache
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.csproj.CoreCompileInputs.cache
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.exe
+D:\Diko\Kuliah\Tugas Kuliah\Semester 4\Pengolahan Citra\Aplikasi Form\PengolahanCitraForms\PengolahanCitraForms\obj\Debug\PengolahanCitraForms.pdb
