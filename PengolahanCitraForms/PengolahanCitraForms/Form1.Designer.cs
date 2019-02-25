@@ -55,6 +55,19 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.redPictureBox = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.imageLoad = new System.Windows.Forms.PictureBox();
+            this.imageHorizontal = new System.Windows.Forms.PictureBox();
+            this.imageVertical = new System.Windows.Forms.PictureBox();
+            this.imageGrayscale = new System.Windows.Forms.PictureBox();
+            this.imageBiner = new System.Windows.Forms.PictureBox();
+            this.imageContrast = new System.Windows.Forms.PictureBox();
+            this.loadPictureBtn = new System.Windows.Forms.Button();
+            this.horizontalBtn = new System.Windows.Forms.Button();
+            this.verticalBtn = new System.Windows.Forms.Button();
+            this.grayscaleBtn = new System.Windows.Forms.Button();
+            this.binerBtn = new System.Windows.Forms.Button();
+            this.contrastBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -65,6 +78,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redPictureBox)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageLoad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageHorizontal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageVertical)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageGrayscale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBiner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageContrast)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -112,6 +132,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -311,6 +332,142 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.contrastBtn);
+            this.tabPage3.Controls.Add(this.binerBtn);
+            this.tabPage3.Controls.Add(this.grayscaleBtn);
+            this.tabPage3.Controls.Add(this.verticalBtn);
+            this.tabPage3.Controls.Add(this.horizontalBtn);
+            this.tabPage3.Controls.Add(this.loadPictureBtn);
+            this.tabPage3.Controls.Add(this.imageContrast);
+            this.tabPage3.Controls.Add(this.imageBiner);
+            this.tabPage3.Controls.Add(this.imageGrayscale);
+            this.tabPage3.Controls.Add(this.imageVertical);
+            this.tabPage3.Controls.Add(this.imageHorizontal);
+            this.tabPage3.Controls.Add(this.imageLoad);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(792, 398);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Flip Horizontal";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // imageLoad
+            // 
+            this.imageLoad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageLoad.Location = new System.Drawing.Point(165, 31);
+            this.imageLoad.Name = "imageLoad";
+            this.imageLoad.Size = new System.Drawing.Size(128, 129);
+            this.imageLoad.TabIndex = 0;
+            this.imageLoad.TabStop = false;
+            // 
+            // imageHorizontal
+            // 
+            this.imageHorizontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageHorizontal.Location = new System.Drawing.Point(321, 31);
+            this.imageHorizontal.Name = "imageHorizontal";
+            this.imageHorizontal.Size = new System.Drawing.Size(128, 129);
+            this.imageHorizontal.TabIndex = 1;
+            this.imageHorizontal.TabStop = false;
+            // 
+            // imageVertical
+            // 
+            this.imageVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageVertical.Location = new System.Drawing.Point(478, 31);
+            this.imageVertical.Name = "imageVertical";
+            this.imageVertical.Size = new System.Drawing.Size(128, 129);
+            this.imageVertical.TabIndex = 2;
+            this.imageVertical.TabStop = false;
+            // 
+            // imageGrayscale
+            // 
+            this.imageGrayscale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageGrayscale.Location = new System.Drawing.Point(165, 210);
+            this.imageGrayscale.Name = "imageGrayscale";
+            this.imageGrayscale.Size = new System.Drawing.Size(128, 129);
+            this.imageGrayscale.TabIndex = 3;
+            this.imageGrayscale.TabStop = false;
+            // 
+            // imageBiner
+            // 
+            this.imageBiner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBiner.Location = new System.Drawing.Point(321, 210);
+            this.imageBiner.Name = "imageBiner";
+            this.imageBiner.Size = new System.Drawing.Size(128, 129);
+            this.imageBiner.TabIndex = 4;
+            this.imageBiner.TabStop = false;
+            // 
+            // imageContrast
+            // 
+            this.imageContrast.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageContrast.Location = new System.Drawing.Point(478, 210);
+            this.imageContrast.Name = "imageContrast";
+            this.imageContrast.Size = new System.Drawing.Size(128, 129);
+            this.imageContrast.TabIndex = 5;
+            this.imageContrast.TabStop = false;
+            // 
+            // loadPictureBtn
+            // 
+            this.loadPictureBtn.Location = new System.Drawing.Point(165, 166);
+            this.loadPictureBtn.Name = "loadPictureBtn";
+            this.loadPictureBtn.Size = new System.Drawing.Size(128, 23);
+            this.loadPictureBtn.TabIndex = 6;
+            this.loadPictureBtn.Text = "Load";
+            this.loadPictureBtn.UseVisualStyleBackColor = true;
+            this.loadPictureBtn.Click += new System.EventHandler(this.loadPictureBtn_Click);
+            // 
+            // horizontalBtn
+            // 
+            this.horizontalBtn.Location = new System.Drawing.Point(321, 166);
+            this.horizontalBtn.Name = "horizontalBtn";
+            this.horizontalBtn.Size = new System.Drawing.Size(128, 23);
+            this.horizontalBtn.TabIndex = 7;
+            this.horizontalBtn.Text = "Flip Horizontal";
+            this.horizontalBtn.UseVisualStyleBackColor = true;
+            this.horizontalBtn.Click += new System.EventHandler(this.horizontalBtn_Click);
+            // 
+            // verticalBtn
+            // 
+            this.verticalBtn.Location = new System.Drawing.Point(478, 166);
+            this.verticalBtn.Name = "verticalBtn";
+            this.verticalBtn.Size = new System.Drawing.Size(128, 23);
+            this.verticalBtn.TabIndex = 8;
+            this.verticalBtn.Text = "Flip Vertical";
+            this.verticalBtn.UseVisualStyleBackColor = true;
+            this.verticalBtn.Click += new System.EventHandler(this.verticalBtn_Click);
+            // 
+            // grayscaleBtn
+            // 
+            this.grayscaleBtn.Location = new System.Drawing.Point(165, 345);
+            this.grayscaleBtn.Name = "grayscaleBtn";
+            this.grayscaleBtn.Size = new System.Drawing.Size(128, 23);
+            this.grayscaleBtn.TabIndex = 9;
+            this.grayscaleBtn.Text = "Grayscale";
+            this.grayscaleBtn.UseVisualStyleBackColor = true;
+            this.grayscaleBtn.Click += new System.EventHandler(this.grayscaleBtn_Click);
+            // 
+            // binerBtn
+            // 
+            this.binerBtn.Location = new System.Drawing.Point(321, 345);
+            this.binerBtn.Name = "binerBtn";
+            this.binerBtn.Size = new System.Drawing.Size(128, 23);
+            this.binerBtn.TabIndex = 10;
+            this.binerBtn.Text = "Biner";
+            this.binerBtn.UseVisualStyleBackColor = true;
+            this.binerBtn.Click += new System.EventHandler(this.binerBtn_Click);
+            // 
+            // contrastBtn
+            // 
+            this.contrastBtn.Location = new System.Drawing.Point(478, 345);
+            this.contrastBtn.Name = "contrastBtn";
+            this.contrastBtn.Size = new System.Drawing.Size(128, 23);
+            this.contrastBtn.TabIndex = 11;
+            this.contrastBtn.Text = "Contrast";
+            this.contrastBtn.UseVisualStyleBackColor = true;
+            this.contrastBtn.Click += new System.EventHandler(this.contrastBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +489,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redPictureBox)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imageLoad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageHorizontal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageVertical)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageGrayscale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBiner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageContrast)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,6 +529,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button contrastBtn;
+        private System.Windows.Forms.Button binerBtn;
+        private System.Windows.Forms.Button grayscaleBtn;
+        private System.Windows.Forms.Button verticalBtn;
+        private System.Windows.Forms.Button horizontalBtn;
+        private System.Windows.Forms.Button loadPictureBtn;
+        private System.Windows.Forms.PictureBox imageContrast;
+        private System.Windows.Forms.PictureBox imageBiner;
+        private System.Windows.Forms.PictureBox imageGrayscale;
+        private System.Windows.Forms.PictureBox imageVertical;
+        private System.Windows.Forms.PictureBox imageHorizontal;
+        private System.Windows.Forms.PictureBox imageLoad;
     }
 }
 
