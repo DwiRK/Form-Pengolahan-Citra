@@ -158,45 +158,45 @@ namespace PengolahanCitraForms
 
             if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
             {
-                imageLoad.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageLoad.Image = Image.FromFile(ofd.FileName);
+                imgLoadFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgLoadFlip.Image = Image.FromFile(ofd.FileName);
 
-                imageGrayscale.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageGrayscale.Image = Image.FromFile(ofd.FileName);
+                imgGrayscaleFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgGrayscaleFlip.Image = Image.FromFile(ofd.FileName);
 
-                imageBiner.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageBiner.Image = Image.FromFile(ofd.FileName);
+                imgBinerFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgBinerFlip.Image = Image.FromFile(ofd.FileName);
 
-                imageHorizontal.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageHorizontal.Image = Image.FromFile(ofd.FileName);
+                imgHorizontalFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgHorizontalFlip.Image = Image.FromFile(ofd.FileName);
 
-                imageVertical.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageVertical.Image = Image.FromFile(ofd.FileName);
+                imgVerticalFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgVerticalFlip.Image = Image.FromFile(ofd.FileName);
 
-                imageContrast.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageContrast.Image = Image.FromFile(ofd.FileName);
+                imgContrastFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgContrastFlip.Image = Image.FromFile(ofd.FileName);
             }
         }
 
         private void grayscaleBtn_Click(object sender, EventArgs e)
         {
-            Bitmap bmp3 = (Bitmap)imageGrayscale.Image;            Color pixelColor;            imageGrayscale.Image = new Bitmap(imageGrayscale.Width, imageGrayscale.Height);            for (int y = 0; y < bmp3.Height; y++)            {                for (int x = 0; x < bmp3.Width; x++)                {
+            Bitmap bmp3 = (Bitmap)imgGrayscaleFlip.Image;            Color pixelColor;            imgGrayscaleFlip.Image = new Bitmap(imgGrayscaleFlip.Width, imgGrayscaleFlip.Height);            for (int y = 0; y < bmp3.Height; y++)            {                for (int x = 0; x < bmp3.Width; x++)                {
                     pixelColor = bmp3.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    int rata = (int)(red + green + blue) / 3;                    bmp3.SetPixel(x, y, Color.FromArgb(rata, rata, rata));
-                }            }            imageGrayscale.SizeMode = PictureBoxSizeMode.StretchImage;            imageGrayscale.Image = bmp3;
+                }            }            imgGrayscaleFlip.SizeMode = PictureBoxSizeMode.StretchImage;            imgGrayscaleFlip.Image = bmp3;
         }
 
         private void binerBtn_Click(object sender, EventArgs e)
         {
-            Bitmap bmp4 = (Bitmap)imageBiner.Image;            Color pixelColor;
+            Bitmap bmp4 = (Bitmap)imgBinerFlip.Image;            Color pixelColor;
 
             for (int y = 0; y < bmp4.Height; y++)            {                for (int x = 0; x < bmp4.Width; x++)                {                    pixelColor = bmp4.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    int rata = (int)(red + green + blue) / 3;                    if (rata < 128) { rata = 0; } else { rata = 255; }                    bmp4.SetPixel(x, y, Color.FromArgb(rata, rata, rata));                }            }
 
-            imageBiner.SizeMode = PictureBoxSizeMode.StretchImage;            imageBiner.Image = bmp4;
+            imgBinerFlip.SizeMode = PictureBoxSizeMode.StretchImage;            imgBinerFlip.Image = bmp4;
         }
 
         private void horizontalBtn_Click(object sender, EventArgs e)
         {
-            Bitmap source = (Bitmap)imageHorizontal.Image;
+            Bitmap source = (Bitmap)imgHorizontalFlip.Image;
 
             Color pC; //pixelColor
 
@@ -213,14 +213,14 @@ namespace PengolahanCitraForms
                     }
                 }
 
-                imageHorizontal.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageHorizontal.Image = bmp1;
+                imgHorizontalFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgHorizontalFlip.Image = bmp1;
             }
         }
 
         private void verticalBtn_Click(object sender, EventArgs e)
         {
-            Bitmap source = (Bitmap)imageVertical.Image;
+            Bitmap source = (Bitmap)imgVerticalFlip.Image;
 
             Color pC; //pixelColor
 
@@ -240,19 +240,56 @@ namespace PengolahanCitraForms
 
                 }
 
-                imageVertical.SizeMode = PictureBoxSizeMode.StretchImage;
-                imageVertical.Image = bmp2;
+                imgVerticalFlip.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgVerticalFlip.Image = bmp2;
             }
         }
 
         private void contrastBtn_Click(object sender, EventArgs e)
         {
-            Bitmap source = (Bitmap)imageContrast.Image;            Bitmap bmp1 = new Bitmap(source.Height, source.Width);            bmp1 = source;            Color pixelColor;            int k = 30;            for (int y = 0; y < source.Height; y++)            {                for (int x = 0; x < source.Width; x++)                {                    pixelColor = source.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    if ((red + k) <= 255) { red = red + k; };
+            Bitmap source = (Bitmap)imgContrastFlip.Image;            Bitmap bmp1 = new Bitmap(source.Height, source.Width);            bmp1 = source;            Color pixelColor;            int k = 30;            for (int y = 0; y < source.Height; y++)            {                for (int x = 0; x < source.Width; x++)                {                    pixelColor = source.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    if ((red + k) <= 255) { red = red + k; };
                     if ((green + k) <= 255) { green = green + k; };
                     if ((blue + k) <= 255) { blue = blue + k; };
                     bmp1.SetPixel(x, y, Color.FromArgb(red, green, blue));                }            }
 
-            imageContrast.SizeMode = PictureBoxSizeMode.StretchImage;            imageContrast.Image = bmp1;
+            imgContrastFlip.SizeMode = PictureBoxSizeMode.StretchImage;            imgContrastFlip.Image = bmp1;
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
+
+            if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
+            {
+                imgLoadKuant.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgLoadKuant.Image = Image.FromFile(ofd.FileName);
+
+                imgKuantGray16.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgKuantGray16.Image = Image.FromFile(ofd.FileName);
+
+                imgKuantGray4.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgKuantGray4.Image = Image.FromFile(ofd.FileName);
+
+                imgKuantGray2.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgKuantGray2.Image = Image.FromFile(ofd.FileName);
+            }
+        }
+
+        private void grayKuant16Btn_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp1 = (Bitmap)imgKuantGray16.Image;            Color pixelColor;            int K = 16;            int th = (int)256 / K;            for (int y = 0; y < bmp1.Height; y++)            {                for (int x = 0; x < bmp1.Width; x++)                {                    pixelColor = bmp1.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    int rata = (int)(red + green + blue) / 3;                    int kuantisasi = (int)(rata / th);                    int result = (int)th * kuantisasi;                    bmp1.SetPixel(x, y, Color.FromArgb(result, result, result));
+                }            }            imgKuantGray16.Image = new Bitmap(imgKuantGray16.Width, imgKuantGray16.Height);            imgKuantGray16.SizeMode = PictureBoxSizeMode.StretchImage;            imgKuantGray16.Image = bmp1;
+        }
+
+        private void grayKuant4Btn_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp1 = (Bitmap)imgKuantGray4.Image;            Color pixelColor;            int K = 4;            int th = (int)256 / K;            for (int y = 0; y < bmp1.Height; y++)            {                for (int x = 0; x < bmp1.Width; x++)                {                    pixelColor = bmp1.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    int rata = (int)(red + green + blue) / 3;                    int kuantisasi = (int)(rata / th);                    int result = (int)th * kuantisasi;                    bmp1.SetPixel(x, y, Color.FromArgb(result, result, result));                }            }            imgKuantGray4.Image = new Bitmap(imgKuantGray4.Width, imgKuantGray4.Height);            imgKuantGray4.SizeMode = PictureBoxSizeMode.StretchImage;            imgKuantGray4.Image = bmp1;
+        }
+
+        private void grayKuant2Btn_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp1 = (Bitmap)imgKuantGray2.Image;            Color pixelColor;            int K = 2;            int th = (int)256 / K;            for (int y = 0; y < bmp1.Height; y++)            {                for (int x = 0; x < bmp1.Width; x++)                {                    pixelColor = bmp1.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    int rata = (int)(red + green + blue) / 3;                    int kuantisasi = (int)(rata / th);                    int result = (int)th * kuantisasi;                    bmp1.SetPixel(x, y, Color.FromArgb(result, result, result));                }            }            imgKuantGray2.Image = new Bitmap(imgKuantGray2.Width, imgKuantGray2.Height);            imgKuantGray2.SizeMode = PictureBoxSizeMode.StretchImage;            imgKuantGray2.Image = bmp1;
         }
     }
 }
