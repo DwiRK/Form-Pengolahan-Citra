@@ -77,6 +77,13 @@
             this.loadImgKuantBtn = new System.Windows.Forms.Button();
             this.imgLoadKuant = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.contEnchantBtn = new System.Windows.Forms.Button();
+            this.imgContEnchant = new System.Windows.Forms.PictureBox();
+            this.brightEnchantBtn = new System.Windows.Forms.Button();
+            this.imgBrightEnchant = new System.Windows.Forms.PictureBox();
+            this.loadImgEnchantBtn = new System.Windows.Forms.Button();
+            this.imgLoadEnchant = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -99,6 +106,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgKuantGray4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgKuantGray16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLoadKuant)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgContEnchant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBrightEnchant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLoadEnchant)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -148,6 +159,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -577,6 +589,79 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.contEnchantBtn);
+            this.tabPage5.Controls.Add(this.imgContEnchant);
+            this.tabPage5.Controls.Add(this.brightEnchantBtn);
+            this.tabPage5.Controls.Add(this.imgBrightEnchant);
+            this.tabPage5.Controls.Add(this.loadImgEnchantBtn);
+            this.tabPage5.Controls.Add(this.imgLoadEnchant);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(792, 398);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Enchanment";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // contEnchantBtn
+            // 
+            this.contEnchantBtn.Location = new System.Drawing.Point(506, 159);
+            this.contEnchantBtn.Name = "contEnchantBtn";
+            this.contEnchantBtn.Size = new System.Drawing.Size(128, 23);
+            this.contEnchantBtn.TabIndex = 11;
+            this.contEnchantBtn.Text = "Contrast";
+            this.contEnchantBtn.UseVisualStyleBackColor = true;
+            this.contEnchantBtn.Click += new System.EventHandler(this.contEnchantBtn_Click);
+            // 
+            // imgContEnchant
+            // 
+            this.imgContEnchant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgContEnchant.Location = new System.Drawing.Point(506, 25);
+            this.imgContEnchant.Name = "imgContEnchant";
+            this.imgContEnchant.Size = new System.Drawing.Size(128, 128);
+            this.imgContEnchant.TabIndex = 10;
+            this.imgContEnchant.TabStop = false;
+            // 
+            // brightEnchantBtn
+            // 
+            this.brightEnchantBtn.Location = new System.Drawing.Point(327, 159);
+            this.brightEnchantBtn.Name = "brightEnchantBtn";
+            this.brightEnchantBtn.Size = new System.Drawing.Size(128, 23);
+            this.brightEnchantBtn.TabIndex = 9;
+            this.brightEnchantBtn.Text = "Brightness";
+            this.brightEnchantBtn.UseVisualStyleBackColor = true;
+            this.brightEnchantBtn.Click += new System.EventHandler(this.brightEnchantBtn_Click);
+            // 
+            // imgBrightEnchant
+            // 
+            this.imgBrightEnchant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgBrightEnchant.Location = new System.Drawing.Point(327, 25);
+            this.imgBrightEnchant.Name = "imgBrightEnchant";
+            this.imgBrightEnchant.Size = new System.Drawing.Size(128, 128);
+            this.imgBrightEnchant.TabIndex = 8;
+            this.imgBrightEnchant.TabStop = false;
+            // 
+            // loadImgEnchantBtn
+            // 
+            this.loadImgEnchantBtn.Location = new System.Drawing.Point(148, 159);
+            this.loadImgEnchantBtn.Name = "loadImgEnchantBtn";
+            this.loadImgEnchantBtn.Size = new System.Drawing.Size(128, 23);
+            this.loadImgEnchantBtn.TabIndex = 7;
+            this.loadImgEnchantBtn.Text = "Load";
+            this.loadImgEnchantBtn.UseVisualStyleBackColor = true;
+            this.loadImgEnchantBtn.Click += new System.EventHandler(this.loadImgEnchantBtn_Click);
+            // 
+            // imgLoadEnchant
+            // 
+            this.imgLoadEnchant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgLoadEnchant.Location = new System.Drawing.Point(148, 25);
+            this.imgLoadEnchant.Name = "imgLoadEnchant";
+            this.imgLoadEnchant.Size = new System.Drawing.Size(128, 128);
+            this.imgLoadEnchant.TabIndex = 6;
+            this.imgLoadEnchant.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -610,6 +695,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgKuantGray4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgKuantGray16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLoadKuant)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgContEnchant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBrightEnchant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLoadEnchant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,6 +754,13 @@
         private System.Windows.Forms.PictureBox imgKuantGray16;
         private System.Windows.Forms.Button loadImgKuantBtn;
         private System.Windows.Forms.PictureBox imgLoadKuant;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button contEnchantBtn;
+        private System.Windows.Forms.PictureBox imgContEnchant;
+        private System.Windows.Forms.Button brightEnchantBtn;
+        private System.Windows.Forms.PictureBox imgBrightEnchant;
+        private System.Windows.Forms.Button loadImgEnchantBtn;
+        private System.Windows.Forms.PictureBox imgLoadEnchant;
     }
 }
 

@@ -291,5 +291,43 @@ namespace PengolahanCitraForms
         {
             Bitmap bmp1 = (Bitmap)imgKuantGray2.Image;            Color pixelColor;            int K = 2;            int th = (int)256 / K;            for (int y = 0; y < bmp1.Height; y++)            {                for (int x = 0; x < bmp1.Width; x++)                {                    pixelColor = bmp1.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    int rata = (int)(red + green + blue) / 3;                    int kuantisasi = (int)(rata / th);                    int result = (int)th * kuantisasi;                    bmp1.SetPixel(x, y, Color.FromArgb(result, result, result));                }            }            imgKuantGray2.Image = new Bitmap(imgKuantGray2.Width, imgKuantGray2.Height);            imgKuantGray2.SizeMode = PictureBoxSizeMode.StretchImage;            imgKuantGray2.Image = bmp1;
         }
+
+        private void loadImgEnchantBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "jpg (*.jpg)|*.jpg|bmp (*.bmp)|*.bmp|png (*.png)|*.png";
+
+            if (ofd.ShowDialog() == DialogResult.OK && ofd.FileName.Length > 0)
+            {
+                imgLoadEnchant.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgLoadEnchant.Image = Image.FromFile(ofd.FileName);
+
+                imgBrightEnchant.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgBrightEnchant.Image = Image.FromFile(ofd.FileName);
+
+                imgContEnchant.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgContEnchant.Image = Image.FromFile(ofd.FileName);
+            }
+        }
+
+        private void brightEnchantBtn_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp1 = (Bitmap)imgBrightEnchant.Image;            Color pixelColor;
+
+            int K = 50;
+
+            for (int y = 0; y < bmp1.Height; y++)            {                for (int x = 0; x < bmp1.Width; x++)                {                    pixelColor = bmp1.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;                    if ((red + K) <= 255) { red = red + K; }                    if ((green + K) <= 255) { green = green + K; }                    if ((blue + K) <= 255) { blue = blue + K; }                    bmp1.SetPixel(x, y, Color.FromArgb(red, green, blue));                }            }            imgBrightEnchant.Image = new Bitmap(imgBrightEnchant.Width, imgBrightEnchant.Height);            imgBrightEnchant.SizeMode = PictureBoxSizeMode.StretchImage;            imgBrightEnchant.Image = bmp1;
+        }
+
+        private void contEnchantBtn_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp1 = (Bitmap)imgContEnchant.Image;            Color pixelColor;
+
+            float K = 0.7f;            for (int y = 0; y < bmp1.Height; y++)            {                for (int x = 0; x < bmp1.Width; x++)                {                    pixelColor = bmp1.GetPixel(x, y);                    int red = pixelColor.R;                    int green = pixelColor.G;                    int blue = pixelColor.B;
+
+                    red = (int)(K * red);                    green = (int)(K * green);                    blue = (int)(K * blue);                    if (red > 255) { red = 255; }                    if (green > 255) { green = 255; }                    if (blue > 255) { blue = 255; }                    if (red < 0) { red = 0; }                    if (green < 0) { green = 0; }                    if (blue < 0) { blue = 0; }
+
+                    bmp1.SetPixel(x, y, Color.FromArgb(red, green, blue));                }            }            imgContEnchant.SizeMode = PictureBoxSizeMode.StretchImage;            imgContEnchant.Image = bmp1;
+        }
     }
 }
